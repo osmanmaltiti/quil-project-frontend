@@ -41,12 +41,12 @@ const [ handleQuil, logOut,
 useEffect(() => {
     const refresh = setInterval(() => {
         (async() => {
-            const userRes = await axios.get(`/user/profile/${auth.currentUser.uid}`);
-            const quilRes = await axios.get('/user/quil');
+            const userRes = await axios.get(`https://quil.herokuapp.com/user/profile/${auth.currentUser.uid}`);
+            const quilRes = await axios.get('https://quil.herokuapp.com/user/quil');
             dispatch(userprofile({user: userRes.data, quil: quilRes.data}));
         })();
         (async() => {
-            const allLikes = await axios.get(`/user/quil/likesUnlikes/${auth.currentUser.uid}`);
+            const allLikes = await axios.get(`https://quil.herokuapp.com/user/quil/likesUnlikes/${auth.currentUser.uid}`);
             dispatch(totalLikes(allLikes.data))
         })();
         dispatch(totalQuils(quil?.filter(item => item.uid === auth.currentUser.uid).length));
@@ -70,7 +70,7 @@ const pictureUpload = (file) => {
             setProgress(progress)
         }, (err) => (console.log(err)), () => {
             getDownloadURL(upload.snapshot.ref).then(async(url) => {
-                await axios.patch('/user', {
+                await axios.patch('https://quil.herokuapp.com/user', {
                     uid: auth.currentUser.uid, 
                     quils: `${pictureCaption},${url}`,
                     createdAt: createdAt()

@@ -22,11 +22,11 @@ const Videos = () => {
             time = {`${item.date?.hour}:${item.date?.minute}`}
             date = {`${item.date?.day}-${item.date?.month}-${item.date?.year}`}
             likeMe = { async() => {
-                await axios.patch(`/user/quil/like/${item._id}`, {
+                await axios.patch(`https://quil.herokuapp.com/user/quil/like/${item._id}`, {
                 uid: auth.currentUser.uid
                 });} }
             unlikeMe = { async() => {
-                await axios.patch(`/user/quil/unlike/${item._id}`, {
+                await axios.patch(`https://quil.herokuapp.com/user/quil/unlike/${item._id}`, {
                 uid: auth.currentUser.uid
                 });} }
             likeState = {

@@ -35,19 +35,19 @@ export const Profile = () => {
   useEffect(() => {
     (async() => {
       if(link === null) return;
-      await axios.patch(`/user/${auth.currentUser.uid}`, { profileUrl: link });
+      await axios.patch(`https://quil.herokuapp.com/user/${auth.currentUser.uid}`, { profileUrl: link });
     })();
   }, [link]);
 
   useEffect(() => {
     const refresh = setInterval(() => {
         (async() => {
-            const userRes = await axios.get(`/user/profile/${auth.currentUser.uid}`);
-            const quilRes = await axios.get('/user/quil');
+            const userRes = await axios.get(`https://quil.herokuapp.com/user/profile/${auth.currentUser.uid}`);
+            const quilRes = await axios.get('https://quil.herokuapp.com/user/quil');
             dispatch(userprofile({user: userRes.data, quil: quilRes.data}));
         })();
         (async() => {
-            const allLikes = await axios.get(`/user/quil/likesUnlikes/${auth.currentUser.uid}`);
+            const allLikes = await axios.get(`https://quil.herokuapp.com/user/quil/likesUnlikes/${auth.currentUser.uid}`);
             dispatch(totalLikes(allLikes.data))
         })()
     }, 3000);

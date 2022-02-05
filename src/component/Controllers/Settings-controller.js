@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const useSettings = () => {
   const updateCredentials = async(data) => {
-    const update = await axios.patch('/user/update', {
+    const update = await axios.patch('https://quil.herokuapp.com/user/update', {
       fullname: data.fullname,
       displayname: data.displayname,
       number: data.number,
