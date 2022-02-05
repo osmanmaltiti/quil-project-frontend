@@ -22,7 +22,7 @@ const useSettings = () => {
           () => {
                 getDownloadURL(upload.snapshot.ref)
                 .then(async url => {
-                      await axios.patch(`/user/${auth.currentUser.uid}`, { profileUrl: url });
+                      await axios.patch(`https://quil.herokuapp.com/user/${auth.currentUser.uid}`, { profileUrl: url });
                     })
           })
     }

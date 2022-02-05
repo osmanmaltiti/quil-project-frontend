@@ -25,7 +25,7 @@ const useHome = () => {
     e.preventDefault();
     reset();
     try{
-     await axios.patch('/user', {
+     await axios.patch('https://quil.herokuapp.com/user', {
          uid: auth.currentUser.uid, 
          quils: write,
          createdAt: createdAt()
