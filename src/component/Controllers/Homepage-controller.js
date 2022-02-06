@@ -38,7 +38,7 @@ const useHome = () => {
   const logOut = () => {
     signOut(auth);
     dispatch(logout());
-    navigate('/');
+    navigate('/sign');
   };
 
   const quilMap = (quil) => {

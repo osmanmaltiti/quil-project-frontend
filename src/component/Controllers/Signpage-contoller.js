@@ -27,7 +27,7 @@ const useSignpage = () => {
         alert(`Error message: ${error}`);
         return;
     }
-    navigate('/home');
+    navigate('/');
   };
 
   const handleSignUp = async(signups, event) => {
@@ -41,7 +41,7 @@ const useSignpage = () => {
         const newUser = await createUserWithEmailAndPassword(auth, email, password_reg);
         const storageRef = ref(storage, `/users/${auth.currentUser.uid}/profile`);
         await uploadBytesResumable(storageRef, file);
-        navigate('/home');
+        navigate('/');
         await axios.post('https://quil.herokuapp.com/user', {
             uid: newUser.user.uid, fullname: fullname, 
             displayname: displayname,

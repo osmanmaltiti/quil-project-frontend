@@ -13,7 +13,7 @@ const PrivateRoute = ({children}) => {
     
     useEffect(() => {
         const timer = setTimeout(() => {
-            setState(<Navigate to={'/'}/>)
+            setState(<Navigate to={'/sign'}/>)
         }, 4000);
         return () => {
             user && clearTimeout(timer);

@@ -16,7 +16,7 @@ const useProfile = () => {
     e.preventDefault();
     signOut(auth);
     dispatch(logout());
-    navigate('/');
+    navigate('/sign');
   }
 
   const quilMap = (quil) => {
