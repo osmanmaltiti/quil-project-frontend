@@ -212,8 +212,8 @@
       }
       
       #quil-image{
-        margin-top: 0.2rem !important; object-fit: fill;
-        width: 100% !important;
+        margin-top: 0.2rem !important; object-fit: contain;
+        width: 100% !important; height: 8% !important;
       }
       #quil-video{
         margin-top: 0.2rem !important; object-fit: fill;
