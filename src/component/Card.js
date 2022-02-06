@@ -81,14 +81,14 @@ export const Card = (props) => {
                                 size = { xs === true ? '15px' : '21px'} 
                                 style={ {verticalAlign: 'top', color: props.likeState} }/>  
                         </button> 
-                        <p>{props.like}</p>
                     </label>
+                        <p>{props.like}</p>
                     <label>
                         <button type='button' id="unlike" onClick={props.unlikeMe}>
                             <IoIosThumbsDown className="icons icons-unlike"  size={ xs === true ? '15px' : '21px'} style={ {verticalAlign: 'top', color: props.unLikeState} }/>
                         </button>
-                        <p>{props.unlike}</p>
                     </label>
+                        <p>{props.unlike}</p>
                     </div>
                     <div>{xs === true || ss === true ? null : md === true ? `${props.date}` : `${props.date} at ${props.time}`}</div>
                 </div>
