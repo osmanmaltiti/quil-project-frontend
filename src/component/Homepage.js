@@ -183,7 +183,7 @@ return(
                 <button className="send" 
                         onClick={(e) => handleQuil(write.value, reset_write, e)}>
                           send 
-                        <IoSend size='20px' style={{verticalAlign: 'middle', color: 'black'}}/>
+                        <IoSend size='20px' style={{verticalAlign: 'middle', color: 'white'}}/>
                 </button>
                 
                 <div id='icon-group'>

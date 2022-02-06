@@ -32,7 +32,7 @@ const useSignpage = () => {
 
   const handleSignUp = async(signups, event) => {
     event.preventDefault();
-    const defaultProfile = process.env.REACT_APP_DEFAULT_PROFILE_URL;
+    const defaultProfile = "https://firebasestorage.googleapis.com/v0/b/project-one-2c857.appspot.com/o/default%2Fdefaultprofile?alt=media&token=24f68a6b-23f4-4083-b3c0-1ba2471f3e3a";
     const {fullname, displayname, email, number, password_reg, createdAt} = signups;
     reset_fullname(); reset_displayname();
     reset_email(); reset_number();
@@ -42,7 +42,7 @@ const useSignpage = () => {
         const storageRef = ref(storage, `/users/${auth.currentUser.uid}/profile`);
         await uploadBytesResumable(storageRef, file);
         navigate('/home');
-        await axios.post('/user', {
+        await axios.post('https://quil.herokuapp.com/user', {
             uid: newUser.user.uid, fullname: fullname, 
             displayname: displayname,
             email: email, number: number,

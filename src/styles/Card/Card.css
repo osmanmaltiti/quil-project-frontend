@@ -273,6 +273,8 @@
   }
   #main-card #bottom #card-extras #card-extras-buttons p {
     font-size: 14px;
+    width: 0;
+    background: none;
   }
   #main-card #bottom #card-extras span {
     margin-right: 10px;

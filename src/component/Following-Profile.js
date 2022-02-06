@@ -16,7 +16,7 @@ function FollowingProfile() {
   
   useEffect(() => {
     const fetch = async(id) => {
-      const res = await axios.get(`/user/userquery/${id}`);
+      const res = await axios.get(`https://quil.herokuapp.com/user/profile/user/userquery/${id}`);
       setData(res.data)
     }
     fetch(otherUser);
@@ -26,7 +26,7 @@ function FollowingProfile() {
   const handleFollow = async(userId, followers) => {
     let data = { userId, followers }
     const res = await 
-                  axios.patch(`/user/follow/${auth.currentUser.uid}`, {data})
+                  axios.patch(`https://quil.herokuapp.com/user/profile/user/follow/${auth.currentUser.uid}`, {data})
     setUpdate(res.data)
   }
 
@@ -47,18 +47,18 @@ function FollowingProfile() {
             time = {`${item.date?.hour}:${item.date?.minute}`}
             date = {`${item.date?.day}-${item.date?.month}-${item.date?.year}`}
             likeMe = { async() => {
-                await axios.patch(`/user/quil/like/${item._id}`, {
+                await axios.patch(`https://quil.herokuapp.com/user/profile/user/quil/like/${item._id}`, {
                 uid: auth.currentUser.uid
                 });} }
             unlikeMe = { async() => {
-                await axios.patch(`/user/quil/unlike/${item._id}`, {
+                await axios.patch(`https://quil.herokuapp.com/user/profile/user/quil/unlike/${item._id}`, {
                 uid: auth.currentUser.uid
                 });} }
             likeState = {
-              item.likes.includes(auth.currentUser.uid) && 'green'
+              item.likes.includes(auth.currentUser.uid) ? 'green' : 'black'
             }
             unLikeState = {
-              item.unlikes.includes(auth.currentUser.uid) && 'red'
+              item.unlikes.includes(auth.currentUser.uid) ? 'red' : 'black'
             }
       />)
   }
