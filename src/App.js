@@ -15,9 +15,9 @@ export const App = () => {
   
   return(
       <Routes>
-        <Route path={'/'} element={
+        <Route path={'/sign'} element={
             <Sign/>}/>
-        <Route path={'/home'} element={
+        <Route path={'/'} element={
             <PrivateRoute>
               <Home/>
             </PrivateRoute>}/>
