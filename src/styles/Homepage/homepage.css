@@ -3,7 +3,7 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
-  position: fixed;
+  position: absolute;
 }
 #main #header {
   display: flex;

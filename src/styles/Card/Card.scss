@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 #main-card{
   background-color: rgba(238, 236, 236, 0.329);
   display: flex; flex-direction: column;
@@ -207,7 +208,9 @@
       }
       #write-area{
         font-size: 10px !important;
+        font-family: 'Ubuntu' !important;
       }
+      
       #quil-image{
         margin-top: 0.2rem !important; object-fit: fill;
         width: 100% !important;
@@ -220,10 +223,15 @@
       }
       #card-extras-buttons{
         display: flex; flex-direction: row;
-        align-items: center; gap: 1px;
+        align-items: center; gap: 0;
         justify-content: space-around;
-        padding-left: 0; margin-left: -0.2rem;
-        width: 90% !important;
+        padding-left: 0; margin-left: -0.5rem;
+        width: 100% !important;
+      }
+      label{
+        display: flex; flex-direction: row;
+        gap: 1.5rem; align-items: center;
+        justify-content: center;
       }
     }
 }
