@@ -560,6 +560,7 @@ h4 {
     gap: 10px;
     background-color: white;
     overflow: hidden;
+    border: 2px solid black;
   }
   #main #body #right-pane #menu-items:hover {
     width: 15rem !important;
@@ -567,8 +568,19 @@ h4 {
     background-color: white;
   }
   #main #body #right-pane #menu-items:hover .menu-buttons {
-    width: 90%;
+    width: 70% !important;
     color: white;
+    transform: translateX(-1.5rem);
+  }
+  #main #body #right-pane #menu-items:focus {
+    width: 15rem !important;
+    position: relative;
+    background-color: white;
+  }
+  #main #body #right-pane #menu-items:focus .menu-buttons {
+    width: 70% !important;
+    color: white;
+    transform: translateX(2rem);
   }
   #main #body #right-pane .menu-buttons {
     height: 2rem;
@@ -581,6 +593,7 @@ h4 {
     background-color: black;
     color: black;
     padding: 0px;
+    transform: translateX(-3rem);
   }
   #main #body #right-pane .menu-buttons:hover {
     cursor: pointer;
