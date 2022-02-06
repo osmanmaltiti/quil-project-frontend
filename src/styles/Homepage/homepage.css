@@ -954,6 +954,7 @@ h4 {
     position: absolute;
     left: 0.5rem;
     top: 26rem;
+    border: 2px solid black;
   }
   #main #body #right-pane #write::-moz-placeholder {
     opacity: 0;
@@ -1017,6 +1018,7 @@ h4 {
     position: absolute;
     left: 0.5rem;
     top: 20rem;
+    border: 2px solid black;
   }
   #main #body #right-pane #menu-items:hover {
     width: 15rem;
@@ -1026,8 +1028,9 @@ h4 {
     background-color: white;
   }
   #main #body #right-pane #menu-items:hover .menu-buttons {
-    width: 90%;
+    width: 80% !important;
     color: white !important;
+    transform: translateX(1rem);
   }
   #main #body #right-pane #menu-items:focus {
     width: 15rem;
@@ -1037,7 +1040,8 @@ h4 {
     background-color: white;
   }
   #main #body #right-pane #menu-items:focus .menu-buttons {
-    width: 90%;
+    width: 80% !important;
+    transform: translateX(1rem);
   }
   #main #body #right-pane .menu-buttons {
     height: 2rem;
@@ -1050,6 +1054,7 @@ h4 {
     background-color: black;
     color: black;
     padding: 0px;
+    transform: translateX(2rem);
   }
   #main #body #right-pane .menu-buttons:hover {
     cursor: pointer;
@@ -1073,10 +1078,11 @@ h4 {
     position: absolute;
     left: 0.5rem;
     top: 48rem;
+    border: 2px solid black;
   }
   #main #body #right-pane #icon-buttons:hover {
     gap: 5px;
-    width: 15.4rem;
+    width: 16rem;
     justify-content: space-between;
     border-radius: black;
     position: absolute;
@@ -1253,17 +1259,20 @@ h4 {
   }
   #main #body #left-pane #left-pane-items #user-avi {
     width: 95%;
-    height: 10rem;
+    height: 3rem;
     background-size: cover;
     background-position: center;
     border-radius: 3px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin-left: 2px;
   }
   #main #body #left-pane #left-pane-items:hover {
     height: 6rem;
   }
   #main #body #left-pane #left-pane-items:hover #user-avi {
-    width: 3rem;
-    height: 8rem;
+    width: 95%;
+    height: 2rem;
     border-radius: 3px;
   }
   #main #body #left-pane #left-pane-items #left-item-one {
@@ -1377,7 +1386,7 @@ h4 {
     overflow: hidden;
     border-radius: 5px;
     resize: none;
-    border: 2px solid white;
+    border: 2px solid black;
     background-color: white;
     box-shadow: 0px 0px 5px 2px #d4d3d3;
     position: absolute;
@@ -1446,6 +1455,7 @@ h4 {
     position: absolute;
     left: 0.5rem;
     top: 12rem;
+    border: 2px solid black;
   }
   #main #body #right-pane #menu-items:hover {
     width: 15rem;
@@ -1455,7 +1465,8 @@ h4 {
     background-color: white;
   }
   #main #body #right-pane #menu-items:hover .menu-buttons {
-    width: 90%;
+    width: 80% !important;
+    transform: translateX(1rem);
   }
   #main #body #right-pane #menu-items:focus {
     width: 12rem;
@@ -1465,7 +1476,8 @@ h4 {
     background-color: white;
   }
   #main #body #right-pane #menu-items:focus .menu-buttons {
-    width: 90%;
+    width: 20%;
+    transform: translateX(1rem);
   }
   #main #body #right-pane .menu-buttons {
     height: 2rem;
@@ -1478,6 +1490,7 @@ h4 {
     background-color: black;
     color: white;
     padding: 0px;
+    transform: translateX(2rem);
   }
   #main #body #right-pane .menu-buttons:hover {
     cursor: pointer;
@@ -1501,10 +1514,11 @@ h4 {
     position: absolute;
     left: 0.55rem;
     top: 37rem;
+    border: 2px solid black;
   }
   #main #body #right-pane #icon-buttons:hover {
     gap: 5px;
-    width: 15.4rem;
+    width: 17rem;
     justify-content: space-between;
     border-radius: black;
     position: absolute;

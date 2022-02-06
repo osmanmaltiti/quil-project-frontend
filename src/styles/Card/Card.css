@@ -50,18 +50,14 @@
   font-weight: 600;
 }
 #main-card #top #quil-image {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 10%;
   width: 100%;
   margin-top: 1rem;
   -o-object-fit: fill;
      object-fit: fill;
 }
 #main-card #top #quil-video {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 10%;
   width: 100%;
   margin-top: 1rem;
   -o-object-fit: fill;
@@ -208,19 +204,11 @@
     font-weight: 600;
   }
   #main-card #top #quil-image {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    width: 100%;
     margin-top: 0.5rem;
     -o-object-fit: fill;
        object-fit: fill;
   }
   #main-card #top #quil-video {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    width: 100%;
     margin-top: 0.5rem;
     -o-object-fit: fill;
        object-fit: fill;
@@ -316,8 +304,46 @@
   }
 }
 @media (max-width: 458px) {
+  #main-card {
+    margin: 0 !important;
+  }
+  #main-card #img-button {
+    border: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    width: 2rem !important;
+    height: 2rem !important;
+    border-radius: 50%;
+    background: none;
+  }
+  #main-card #card-avi {
+    border-radius: 50%;
+    height: 2rem !important;
+    width: 2rem !important;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    background-position: center;
+    background-size: cover;
+  }
   #main-card #write-area {
-    font-size: 14px !important;
+    font-size: 10px !important;
+  }
+  #main-card #quil-image {
+    margin-top: 0.2rem !important;
+    -o-object-fit: fill;
+       object-fit: fill;
+    width: 100% !important;
+  }
+  #main-card #quil-video {
+    margin-top: 0.2rem !important;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  #main-card #card-extras {
+    width: 50% !important;
   }
   #main-card #card-extras-buttons {
     display: flex;
@@ -327,5 +353,6 @@
     justify-content: space-around;
     padding-left: 0;
     margin-left: -0.2rem;
+    width: 90% !important;
   }
 }/*# sourceMappingURL=Card.css.map */
