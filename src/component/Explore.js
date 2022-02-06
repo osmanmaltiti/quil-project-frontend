@@ -17,7 +17,7 @@ export const Explore = () => {
               
   useEffect(() => {
     (async() => {
-      const res = await axios.get('/user/search');
+      const res = await axios.get('https://quil.herokuapp.com/user/search');
       dispatch(search(res.data))
     })()
   }, [])

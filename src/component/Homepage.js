@@ -8,9 +8,8 @@ import useInput from "../component/Controllers/custom-hooks/input-hook";
 import useHome from "./Controllers/Homepage-controller";
 import axios from "axios";
 import Popup from "reactjs-popup";
-import { IoPerson, IoStatsChart, IoMic, 
-         IoImage, IoVideocam, IoSend } from "react-icons/io5";
-import { IoMdHappy, IoMdSad } from "react-icons/io";
+import { IoStatsChart, IoSend } from "react-icons/io5";
+import { IoMdHappy, IoMdSad, IoIosImage, IoIosVideocam, IoIosMic, IoIosPerson } from "react-icons/io";
 import { FaFeatherAlt } from "react-icons/fa"
 import logo from "../images/newLogo.png"
 import '../styles/Homepage/homepage.css';
@@ -119,7 +118,7 @@ return(
                 <img id="user-avi" alt={""} src={user?.profileUrl}/>
                 
                 <div id='left-item-one' style={ss === true ? {marginLeft: '-0.5rem'} : null}>
-                    <IoPerson style={{verticalAlign: 'middle', color: 'black'}} size='30px'/>
+                    <IoIosPerson style={{verticalAlign: 'middle', color: 'black'}} size='30px'/>
                     
                     <h4 style={xs === true || ss === true ? {fontSize: "17px"} : {fontSize: "21.5px"}}>{user?.displayname}
                     </h4>
@@ -184,12 +183,12 @@ return(
                 <button className="send" 
                         onClick={(e) => handleQuil(write.value, reset_write, e)}>
                           send 
-                        <IoSend size='20px' style={{verticalAlign: 'middle'}}/>
+                        <IoSend size='20px' style={{verticalAlign: 'middle', color: 'black'}}/>
                 </button>
                 
                 <div id='icon-group'>
                     <Popup trigger = {<button className="icon-buttons">
-                                  <IoVideocam style={{verticalAlign: 'middle'}} size='25px'/>
+                                  <IoIosVideocam style={{verticalAlign: 'middle', color: 'black'}} size='25px'/>
                                   </button>} position={xs === true ? 'top left': 'top center'}>
                     
                     <div id="upload-quil" style={xs === true ? {padding: '20px'}: null}>
@@ -206,11 +205,11 @@ return(
                 </Popup>
                 
                 <button className="icon-buttons">
-                    <IoMic style={{verticalAlign: 'middle'}} size='25px'/>
+                    <IoIosMic style={{verticalAlign: 'middle', color: 'black'}} size='25px'/>
                 </button>
                 
                 <Popup trigger = {<button className="icon-buttons">
-                                    <IoImage style={{verticalAlign: 'middle'}} size='25px'/>
+                                    <IoIosImage style={{verticalAlign: 'middle', color: 'black'}} size='25px'/>
                                   </button>} position={xs === true ? 'top left': 'top center'}>
                         
                         <div id="upload-quil" style={xs === true ? {padding: '20px'}: null}>                         

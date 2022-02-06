@@ -63,10 +63,10 @@ const useHome = () => {
               uid: auth.currentUser.uid
           });} }
       likeState = {
-        item.likes.includes(auth.currentUser.uid) && 'green'
+        item.likes.includes(auth.currentUser.uid) ? 'green' : 'black'
       }
       unLikeState = {
-        item.unlikes.includes(auth.currentUser.uid) && 'red'
+        item.unlikes.includes(auth.currentUser.uid) ? 'red' : 'black'
       }
       profile = {
         () => {

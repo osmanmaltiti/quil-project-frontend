@@ -1,6 +1,6 @@
 import React from "react";
 import '../styles/Card/Card.css';
-import {IoMdThumbsUp, IoMdThumbsDown, IoMdMore} from 'react-icons/io';
+import {IoIosThumbsUp, IoIosThumbsDown, IoIosMore} from 'react-icons/io';
 import Popup from "reactjs-popup";
 import useMedia from "./Controllers/custom-hooks/media-query-hook";
 import { auth } from "../services/firebase";
@@ -62,7 +62,7 @@ export const Card = (props) => {
                 </div>
                 <Popup
                     trigger={<button className="icon-button">
-                                <IoMdMore size={'25px'}/>
+                                <IoIosMore size={'25px'} style={{color: 'black'}}/>
                              </button>} position={'bottom right'}>
                     { auth.currentUser.uid === props.uid &&
                         <button id="popup-delete" onClick={props.delete}>Delete</button>
@@ -77,7 +77,7 @@ export const Card = (props) => {
                     <div id="card-extras-buttons" style={ xs === true ? {gap: '13px'} : null}>
                     <label>
                         <button type='button' id="like"  onClick={props.likeMe}>            
-                            <IoMdThumbsUp className="icons icons-like"  
+                            <IoIosThumbsUp className="icons icons-like"  
                                 size = { xs === true ? '15px' : '21px'} 
                                 style={ {verticalAlign: 'top', color: props.likeState} }/>  
                         </button> 
@@ -85,7 +85,7 @@ export const Card = (props) => {
                         <p>{props.like}</p>
                     <label>
                         <button type='button' id="unlike" onClick={props.unlikeMe}>
-                            <IoMdThumbsDown className="icons icons-unlike"  size={ xs === true ? '15px' : '21px'} style={ {verticalAlign: 'top', color: props.unLikeState} }/>
+                            <IoIosThumbsDown className="icons icons-unlike"  size={ xs === true ? '15px' : '21px'} style={ {verticalAlign: 'top', color: props.unLikeState} }/>
                         </button>
                     </label>
                         <p>{props.unlike}</p></div>
